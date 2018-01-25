@@ -1,0 +1,88 @@
+
+main {
+    background-color: darkblue;
+    /* tudjuk hogy a padding megnöveli az elem szélességét! */
+    padding: 30px;
+	border-bottom: 3px solid #68d2c3;
+    width: 120px;
+	margin: 0 auto;
+}
+footer {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    height: 25px;
+}
+
+h1 {
+    font-size: 40px;
+/*	szöveg középre igazitása */
+	text-align: center;
+}
+
+.main-menu-container {
+    background: blue;
+    /* inline menu esetében a textalign centerr igazit középre 
+	ez is kell ahhoz hogy a main-menu kozepen legyen */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main-menu {
+    list-style: none;
+    padding: 0;
+/*    margin: 0 auto;*/
+}
+.main-menu-item {
+/*	itt állitjuk át a list item tipusát blokk szintüről inline-ra: */
+    display: inline-block;
+/*	ha két paramétert adok, akkor az első paraméter alul-fölul, a másik jobbra-balra */
+    padding: 20px 10px;
+    background-color: blue;
+/*	azért hogy a submenu-t a főmenüpontokhoz képest tudjuk igazitani, az ősszes főmenüpont: position: relative */
+    color: white;
+	position: relative;
+/*	animáció hozzáadása */
+	transition: backgraund-color .5s ease in-out;
+}
+
+.main-menu-item:hover, submenu-item:hover {
+	background-color: darkblue;
+}
+
+main-menu-item:hover > .submenu {
+/*	a submenu akkor jelenik meg ha a main-menu-item-re hoverezünk */
+	visibility: visible;
+	opacity: 1;
+
+}
+
+.submenu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+/*	a submenu pozicióját a document flow-tol függetlenül állitjuk ezért kell a position absolut */
+	position: absolute;
+	top: 60px;
+	left: 0;
+/*	alap esetben a submenu nem látszik */
+	visibility: hidden;
+
+
+}
+
+.submenu-item {
+	padding: 20px 10px;
+		background-color:blue;
+	transition: background-color .5s	ease-in-out
+} 
+
+.gombos-menu{
+	display: none;
+}
+
+.menu-checkbox-input {
+	display: none;
+}
+

@@ -1,0 +1,22 @@
+/*csslint fallback-colors: false, order-alphabetical: false, box-model: false*/
+
+body {
+    background: rgb(72, 83, 112);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.main-menu-container {
+  /* a text-align center csak inline elemeknél működik, de a
+  a main-menu-item egy inline elem lesz.
+  a text align property le öröklődik egészen a main-menu-item-ig */
+  text-align: center;
+  padding-top: 50px;
+}
+
+
+
+
+main {
+  width: 600px;
+  line-height: 1.6;
+}
